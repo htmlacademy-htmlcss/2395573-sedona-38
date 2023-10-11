@@ -1,0 +1,168 @@
+/*проблемы со стилизацией. ничего не понимаю. совсем.*/
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+.wrapper {
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: (0 0 15px 0) rgba(0, 0, 0, 0.2);
+}
+
+body {
+    display: inline-flex;
+    font-family: "PT Sans", sans-serif;
+    font-size: 22px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #333333;
+    background-color: #f2f2f2;
+}
+
+.navigation-link {
+    font-family: "PT Sans" sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.main-header {
+    display: flex;
+    /*height: 64px;
+    width: 1200px;*/
+    justify-content: space-between;
+    background: #ffffff;
+    color: #000000
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.background-index {
+    color: #6768b6;
+    background-color: #333333;
+    background-image: url("//images/photos/index-background.jpg");
+    background-size: cover;
+    /*width: 1200px;
+    height: 485px;
+    flex-shrink: 0;*/
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.welcome-Sedona {
+    display: inline-flex;
+    align-items: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: center;
+
+}
+
+.advantages {
+    text-align: center;
+}
+
+.advantages-title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+}
+
+.blue {
+    background-color: #82b3d3;
+    color: #ffffff;
+}
+
+.light-blue {
+    background-color:  rgba(131, 179, 211, 0.20);
+}
+
+.transparent {
+    background-color:  rgba(131, 179, 211, 0.12);
+}
+
+.rest {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.residence::before {
+    content: url(../images/vector/residence.svg);
+    width: 75px;
+    height: 72px;
+
+}
+
+.residence {
+    background-color:  rgba(131, 179, 211, 0.20);
+    font-size: 18px;
+
+}
+
+.presents::before {
+    content: url(../images/vector/presents.svg);
+    width: 75px;
+    height: 72px;
+}
+
+.presents {
+    background-color:  rgba(131, 179, 211, 0.20);
+}
+
+.food::before {
+        content: url(../images/vector/food.svg);
+        width: 75px;
+        height: 72px;
+
+}
+
+.food {
+    background-color:  rgba(131, 179, 211, 0.12);
+}
+
+.hotel-serch {
+    text-align: center;
+}
+
+.services {
+    text-align: center;
+    font-size: 18px;
+
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.text {
+    font-size: 18px;
+}
+
+/*Каталог*/
+/*мозг отказал, ничего не понимаю, нужна помощь в разборе стилей*/

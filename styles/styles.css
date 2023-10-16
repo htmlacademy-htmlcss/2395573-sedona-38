@@ -21,8 +21,9 @@ html {
 }
 
 .wrapper {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+    flex-grow: 1;
     margin: 0 auto;
     background-color: #ffffff;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -47,6 +48,7 @@ body {
 .main-index {
     display: block;
     flex-grow: 1;
+    background-image: url("../images/vector-files/Vector-first-page.svg");
 }
 
 .navigation-link {
@@ -58,9 +60,18 @@ body {
     text-transform: uppercase;
 }
 
+.navigation-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.navigation-user {
+    display: flex;
+}
+
+
 .main-header {
-    /*height: 64px;
-    width: 1200px;*/
     display: flex;
     background: #ffffff;
     color: #000000
@@ -70,34 +81,59 @@ body {
     display: none;
 }
 
-.background-index {
-    color: #6768b6;
+.welcome {
+    background-image: url("../images/photos/index-background-min.jpg");
+
     background-color: #333333;
-    background-image: url("//images/photos/index-background-min.jpg");
-    /*width: 1200px;
-    height: 485px;
-    flex-shrink: 0;*/
     background-size: 100% auto;
     background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.welcome-sedona {
+    padding: 51px, 371px, 82px;
 }
 
 
 .advantages {
     display: flex;
     text-align: center;
+    justify-content: space-between;
 }
 
 .advantages-title {
-    font-size: 24px;
-    line-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
     font-style: normal;
     text-align: center;
 }
 
-.description {
+.navigation-user {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
     text-align: center;
+
+}
+
+.description {
+    display: flex;
+    text-align: center;
+    color: #000000;
+    font-family: "PT sans";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
     background-color: #82b3d3;
 }
 
@@ -115,6 +151,7 @@ body {
 }
 
 .rest {
+    display: flex;
     text-align: center;
     font-size: 18px;
     font-weight: 400;
@@ -122,7 +159,7 @@ body {
 }
 
 .residence::before {
-    content: url(../images/vector-fils/residence.svg);
+    content: url(../images/vector-files/residence.svg);
     width: 75px;
     height: 72px;
 
@@ -135,7 +172,7 @@ body {
 }
 
 .presents::before {
-    content: url(../images/vector-fils/presents.svg);
+    content: url(../images/vector-files/presents.svg);
     width: 75px;
     height: 72px;
 }
@@ -145,7 +182,7 @@ body {
 }
 
 .food::before {
-        content: url(../images/vector-fils/food.svg);
+        content: url(../images/vector-files/food.svg);
         width: 75px;
         height: 72px;
 
@@ -156,10 +193,12 @@ body {
 }
 
 .hotel-serch {
+    display: flex;
     text-align: center;
 }
 
 .services {
+    display: flex;
     text-align: center;
     font-size: 18px;
 
@@ -173,7 +212,25 @@ h3 {
     font-size: 18px;
 }
 
+.subscribe {
+    display: flex;
+}
+
 .main-footer {
+    font-family: "PT Sans", sans-serif;
+    display: flex;
+
+}
+
+.footer-sosial {
+    display: flex;
+}
+
+.contacts {
+    display: flex;
+}
+
+.footer-logo {
     display: flex;
 }
 

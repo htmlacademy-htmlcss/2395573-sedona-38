@@ -16,20 +16,37 @@
     font-display: swap;
 }
 
+html {
+    min-height: 100%;
+}
+
 .wrapper {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     background-color: #ffffff;
-    box-shadow: (0 0 15px 0) rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    width: 1200px;
 }
 
 body {
-    display: inline-flex;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: "PT Sans", sans-serif;
     font-size: 22px;
     line-height: 21px;
     font-weight: 400;
     color: #333333;
     background-color: #f2f2f2;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.main-index {
+    display: block;
+    flex-grow: 1;
 }
 
 .navigation-link {
@@ -42,10 +59,9 @@ body {
 }
 
 .main-header {
-    display: flex;
     /*height: 64px;
     width: 1200px;*/
-    justify-content: space-between;
+    display: flex;
     background: #ffffff;
     color: #000000
 }
@@ -57,8 +73,7 @@ body {
 .background-index {
     color: #6768b6;
     background-color: #333333;
-    background-image: url("//images/photos/index-background.jpg");
-    background-size: cover;
+    background-image: url("//images/photos/index-background-min.jpg");
     /*width: 1200px;
     height: 485px;
     flex-shrink: 0;*/
@@ -66,16 +81,9 @@ body {
     background-repeat: no-repeat;
 }
 
-.welcome-Sedona {
-    display: inline-flex;
-    align-items: center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-align: center;
-
-}
 
 .advantages {
+    display: flex;
     text-align: center;
 }
 
@@ -90,6 +98,7 @@ body {
 
 .description {
     text-align: center;
+    background-color: #82b3d3;
 }
 
 .blue {
@@ -113,7 +122,7 @@ body {
 }
 
 .residence::before {
-    content: url(../images/vector/residence.svg);
+    content: url(../images/vector-fils/residence.svg);
     width: 75px;
     height: 72px;
 
@@ -126,7 +135,7 @@ body {
 }
 
 .presents::before {
-    content: url(../images/vector/presents.svg);
+    content: url(../images/vector-fils/presents.svg);
     width: 75px;
     height: 72px;
 }
@@ -136,7 +145,7 @@ body {
 }
 
 .food::before {
-        content: url(../images/vector/food.svg);
+        content: url(../images/vector-fils/food.svg);
         width: 75px;
         height: 72px;
 
@@ -164,6 +173,9 @@ h3 {
     font-size: 18px;
 }
 
+.main-footer {
+    display: flex;
+}
+
 /*Каталог*/
 /*мозг отказал, ничего не понимаю, нужна помощь в разборе стилей*/
-

@@ -528,7 +528,7 @@ h3 {
 
 .sort {
   width: 1060px;
-  width: auto 49px;
+  height: 49px;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -568,8 +568,6 @@ h3 {
   line-height: 28px;
   color: inherit;
 }
-
-
 
 .pagination-wrapper {
   width: 1060px;
@@ -623,6 +621,5 @@ h3 {
   flex-direction: column;
   justify-content: center;
   padding: 96px 258px 104px 258px;
-
 
 }

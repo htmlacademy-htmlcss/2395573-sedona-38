@@ -15,7 +15,9 @@
     <div class="page-container">
       <!--хедер-->
       <header class="main-header" data-test="header">
-        <img class="logo" src="images/vector-files/logo.svg" width="140" height="70" alt="Логотип Седоны.">
+        <a class="home" href="index.html">
+          <img class="logo" src="images/vector-files/logo.svg" width="140" height="70" alt="Логотип Седоны.">
+        </a>
         <!--Меню сайта-->
         <nav class="navigation navigation-menu-list">
           <ul class="navigation-list menu-list">
@@ -59,7 +61,7 @@
             </a>
           </li>
           <li class="navigation-item want-here">
-            <a class="link navigation-link button-want-here" href="#">Хочу сюда!</a>
+            <a class="link button-navigation-link button-want-here " href="#">Хочу сюда!</a>
           </li>
         </ul>
       </header>
@@ -80,80 +82,88 @@
                   alt="Домой">
                 </a>
               </li>
-
               <li class="breadcrumbs-item">
                 <span class="breadcrumbs-link breadcrumbs-hotels">Гостиницы</span>
               </li>
-
             </ul>
           </section>
           <!--форма подбора-->
-          <section class="catalog-hotels" data-test="filter">
-            <h2 class="visually-hidden">Фильтры для подбора гостиниц</h2>
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Инфраструктура</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="pool" checked>
-                      Бассейн
+
+          <div class="main-filter">
+            <section class="catalog-hotels" data-test="filter">
+              <h2 class="visually-hidden">Фильтры для подбора гостиниц</h2>
+              <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Инфраструктура</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="pool" checked>
+                        Бассейн
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="parking" checked>
+                        Парковка
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="wi-fi">
+                        Wi-Fi
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Тип жилья</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="hotel" checked>
+                        Гостиница
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="motel">
+                        Мотель
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="product-group" value="apartamenti">
+                        Апартаменты
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+            </section>
+
+            <section class="catalog-price">
+              <h2 class="visually-hidden">Фильтры</h2>
+              <fieldset class="catalog-price">
+                <legend class="catalog-filter-price">Стоимость, ₽ </legend>
+                <div class="set-price">
+                    <label class="price-conditions">
+                    <input class="min-price" type="text" value="0" name="min-price">
                     </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>
-                      Парковка
+                    <label class="price-conditions">
+                      <input  class="min-price" type="text" value="9000" name="max-price">
                     </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="wi-fi">
-                      Wi-Fi
-                    </label>
-                  </li>
-                </ul>
+                </div>
               </fieldset>
+            </section>
 
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Тип жилья</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="hotel" checked>
-                      Гостиница
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="motel">
-                      Мотель
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="apartamenti">
-                      Апартаменты
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-          </section>
-
-          <section class="catalog-price">
-            <h2 class="visually-hidden">Фильтры</h2>
-
-            <!-- <fieldset class="catalog-price">
-                              <p><input type="text" placeholder="От" value="0"></p>
-                              <p><input type="text" placeholder="До" value="9000"></p>
-                              <legend class="catalog-filter-price">Стоимость, ₽ </legend>
-                              не смогла разобраться с фильтрами до конца -->
-
-            <button class="button button-apply" type="submit">Применить</button>
-            <button class="button button-reset" type="reset">Сбросить</button>
-            </form>
-          </section>
-
+            <section>
+              <h2 class="filter-button visually-hidden">кнопки фильтров</h2>
+              <button class="button button-apply" type="submit">Применить</button>
+              <button class="button button-reset" type="reset">Сбросить</button>
+              </form>
+            </section>
+          </div>
         </header>
         <!--сортировка результатов поиска-->
         <div class="results-wrapper" data-test="catalog">

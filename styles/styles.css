@@ -58,7 +58,6 @@ body {
   width: 140px;
   height: 70px;
   position: relative;
-  z-index: 1;
 
 }
 
@@ -125,6 +124,16 @@ background-position: center;
   position: relative;
 }
 
+.navigation-serch:hover,
+.navigation-serch:focus {
+  opacity: 0.3;
+}
+
+.navigation-favorite:hover,
+.navigation-favorite:focus{
+  opacity: 0.3;
+}
+
 .count {
   font-family: "PT Sans", sans-serif;
   border-radius: 50%;
@@ -174,6 +183,8 @@ background-position: center;
 
 .button-want-here:active {
   background-color: #756157;
+  color: #ffffff;
+  opacity: 0.3;
 }
 
 
@@ -281,6 +292,34 @@ background-position: center;
   text-align: center;
   margin-top: 0;
   margin-bottom: 62px;
+  position: relative;
+}
+
+.advantages-title::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  left: 85px;
+  right: 85px;
+  bottom: -31px;
+  border: 1px solid #ffffff;
+  opacity: 0.3;
+  z-index: 2;
+  width: 60px;
+}
+
+.advantages-title-list::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  left: 85px;
+  right: 85px;
+  bottom: -31px;
+  border: 1px solid #000000;
+  opacity: 0.3;
+  z-index: 2;
+  width: 60px;
+
 }
 
 .advantages-description {
@@ -434,21 +473,6 @@ h3 {
 .hotel-serch {
   display: block;
   text-align: center;
-  width: 1200px;
-  min-height: 406px;
-}
-
-.interest-title {
-  font-family: "PT sans", sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  gap: 20px;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase
-}
-
-.reserch {
   padding: 96px 304px;
 
 }
@@ -460,8 +484,8 @@ h3 {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
-  display: block;
+  margin: 0;
+margin-bottom: 20px;
 
 }
 
@@ -472,10 +496,9 @@ h3 {
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-  width: 592px;
-  min-height: 52px;
-  gap: 54px;
-
+margin: 0;
+padding: 0;
+padding-bottom: 54px;
 }
 
 /*подписаться на рассылку*/
@@ -516,13 +539,6 @@ h3 {
 
 }
 
-.hotels-button:hover,
-.hotels-button:focus,
-.hotels-button:active {
-  background: #615048;
-  border: none;
-}
-
 .get-letters-catalog {
   font-family: "PT sans", sans-serif;
   font-size: 30px;
@@ -558,7 +574,6 @@ h3 {
 .hotels-button {
   font-family: "PT sans", sans-serif;
   padding: 8px 50px;
-  align-items: center;
   border-radius: 4px;
   background-color: #756157;
   color: #ffffff;
@@ -566,11 +581,26 @@ h3 {
   font-size: 20px;
   font-weight: 700;
   border: none;
+  display: inline-block;
+
+}
+
+.hotels-button:hover,
+.hotels-button:focus {
+  background: #615048;
+  border: none;
+}
+
+.hotels-button:active{
+  background-color: #615048;
+  color: #ffffff;
+  opacity: 0.3;
 }
 
 .newsletter-form {
   display: flex;
   align-self: stretch;
+  border: none;
 
 }
 
@@ -578,9 +608,11 @@ h3 {
   width: 452px;
   padding: 14px 20px;
   font-family: inherit;
-  border-radius: 4px 0 0 4px;
+  font-size: 18px;
+    border-radius: 4px 0 0 4px;
   background-color: #f2f2f2;
   border: none;
+
 
 }
 
@@ -594,9 +626,26 @@ h3 {
   line-height: 36px;
   text-transform: uppercase;
   border-radius: 0 4px 4px 0;
-  background: #82B3D3;
+  background: #82b3d3;
   color: #ffffff;
   border: none;
+}
+
+.newsletter-button:hover,
+.newsletter-button:focus {
+  background: #68a2ca;
+}
+
+.newsletter-button:active{
+  background: #68a2ca;
+  color: #ffffff;
+opacity: 0.3;
+}
+
+.newsletter-button:disabled {
+  background: #82b3d3;
+  color: #ffffff;
+  opacity: 0.3;
 }
 
 /*Футер*/
@@ -613,7 +662,7 @@ h3 {
   padding: 0 10px;
 }
 
-.footer-sosial-item:hover {
+.sosial-link:hover {
   color: #8268ca;
 }
 
@@ -650,13 +699,45 @@ h3 {
   text-decoration: none;
 }
 
+.contacts-phone {
+  color: #000000;
+}
+
+.contacts-phone:hover,
+.contacts-phone:focus {
+  color: #756157;
+}
+
+.contacts-phone:active{
+  color: #756157;
+  opacity: 0.3;
+}
+
 .footer-logo {
   width: 115px;
   min-height: 33px;
 }
 
+.footer-logo-icon {
+  color: #000000;
+}
+
+.footer-logo-icon:hover,
+.footer-logo-icon:focus {
+  color: #756157;
+}
+
+.footer-logo-icon:active {
+  color: #756157;
+  opacity: 0.3;
+}
+
 /*Каталог*/
 
+.home:hover,
+.home:active {
+  opacity: 30%;
+}
 
 .page-container {
   display: flex;
@@ -755,6 +836,40 @@ h3 {
 
 }
 
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0;
+  margin-right: 30px;
+}
+
+.breadcrumbs::after {
+  content: "";
+  background-image: url(../images/vector-files/bread-crumbs-indicator.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 21px;
+  top: 6px;
+  left: 23px;
+}
+
+.breadcrumbs-home:hover {
+  color: #ffffff;
+  opacity: 60%;
+  }
+
+  .breadcrumbs-home:focus {
+    color: #ffffff;
+  }
+
+  .breadcrumbs-home:active {
+    color: #ffffff;
+    opacity: 30%;
+  }
+
 .button {
   font-family: inherit;
   font-weight: 700;
@@ -781,28 +896,50 @@ h3 {
   background-color: #82b3d3;
 }
 
+.button-favorite:hover,
+.button-favorite:focus {
+  background-color: #68a2ca;
+}
+
+.button-favorite:active {
+  background-color: #82b3d3;
+  opacity: 30%;
+}
+
+.button-favorite:disabled {
+  background-color: #e5e5e5;
+}
+
 .button-choosen {
   background-color: #7db54f;
 }
 
-.breadcrumbs-link {
-  font-size: 16px;
-  line-height: 21px;
-  text-decoration: none;
-  color: #ffffff;
-  margin: 0;
-  margin-right: 30px;
+.button-choosen:hover,
+.button-choosen:focus {
+  background-color: #6c9e42;
 }
 
-.breadcrumbs::after {
-  content: "";
-  background-image: url(../images/vector-files/bread-crumbs-indicator.svg);
-  position: absolute;
-  background-repeat: no-repeat;
-  width: 8px;
-  height: 21px;
-  top: 6px;
-  left: 23px;
+/*opasity срасит всю кнопку, не не текст,
+не получилось состояниу эктив в соотв с макетом*/
+.button-choosen:active {
+  color: #ffffff;
+  opacity: 30%;
+
+}
+
+.button-choosen:disabled {
+  background-color: #e5e5e5;
+}
+
+.product-card-button:hover,
+.product-card-button:focus {
+background-color: #615048;
+}
+
+.product-card-button:active {
+  color: #ffffff;
+  opacity: 30%;
+
 }
 
 .results-wrapper {
@@ -849,7 +986,7 @@ h3 {
 }
 
 .select-options:hover,
-.select-options:active {
+.select-options:focus {
   border: 2px solid #68a2ca;
 }
 
@@ -931,7 +1068,7 @@ h3 {
 }
 
 .view-result:hover {
-  border-color: #83b3d3;
+  border-color: #000000;
   cursor: auto;
 }
 
@@ -986,8 +1123,7 @@ h3 {
 
 .product-card-price {
   font-size: 16px;
-  display: grid;
-  margin: 0;
+    margin: 0;
   padding: 0;
   gap: 16px;
 }
@@ -1013,7 +1149,6 @@ h3 {
   background-color: #756157;
 
 }
-
 
 .reiting {
   font-size: 16px;

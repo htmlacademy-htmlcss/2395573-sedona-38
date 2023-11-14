@@ -45,6 +45,22 @@ body {
 
 }
 
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+
 .main-header {
   display: flex;
   background: #ffffff;
@@ -81,18 +97,18 @@ body {
 
 .navigation-link:hover,
 .navigation-link:focus {
-color: #615048;
-border: none;
+  color: #615048;
+  border: none;
 }
 
 .navigation-link:active {
- background-color: #ffffff;
+  background-color: #ffffff;
   color: #756157;
-border: none;
+  border: none;
 }
 
 .navigation-item {
-position: relative;
+  position: relative;
 }
 
 .navigation-link-current::after {
@@ -130,7 +146,7 @@ background-position: center;
 }
 
 .navigation-favorite:hover,
-.navigation-favorite:focus{
+.navigation-favorite:focus {
   opacity: 0.3;
 }
 
@@ -485,7 +501,7 @@ h3 {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-margin-bottom: 20px;
+  margin-bottom: 20px;
 
 }
 
@@ -496,9 +512,9 @@ margin-bottom: 20px;
   font-weight: 400;
   line-height: 26px;
   text-align: center;
-margin: 0;
-padding: 0;
-padding-bottom: 54px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 54px;
 }
 
 /*подписаться на рассылку*/
@@ -591,7 +607,7 @@ padding-bottom: 54px;
   border: none;
 }
 
-.hotels-button:active{
+.hotels-button:active {
   background-color: #615048;
   color: #ffffff;
   opacity: 0.3;
@@ -609,7 +625,7 @@ padding-bottom: 54px;
   padding: 14px 20px;
   font-family: inherit;
   font-size: 18px;
-    border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
   background-color: #f2f2f2;
   border: none;
 
@@ -636,10 +652,10 @@ padding-bottom: 54px;
   background: #68a2ca;
 }
 
-.newsletter-button:active{
+.newsletter-button:active {
   background: #68a2ca;
   color: #ffffff;
-opacity: 0.3;
+  opacity: 0.3;
 }
 
 .newsletter-button:disabled {
@@ -662,12 +678,14 @@ opacity: 0.3;
   padding: 0 10px;
 }
 
-.sosial-link:hover {
-  color: #8268ca;
+.sosial-link:hover path,
+.sosial-link:focus path {
+  fill: #68a2ca;
 }
 
-.sosial-link:active {
-  color: #68a2Ca4d;
+.sosial-link:active path {
+  fill: #68a2ca;
+  opacity: 0.3;
 }
 
 .footer-sosial-list {
@@ -708,7 +726,7 @@ opacity: 0.3;
   color: #756157;
 }
 
-.contacts-phone:active{
+.contacts-phone:active {
   color: #756157;
   opacity: 0.3;
 }
@@ -722,13 +740,12 @@ opacity: 0.3;
   color: #000000;
 }
 
-.footer-logo-icon:hover,
-.footer-logo-icon:focus {
-  color: #756157;
+.footer-logo-link:hover path,
+.footer-logo-link:focus path {
+fill: #756157;
 }
-
-.footer-logo-icon:active {
-  color: #756157;
+.footer-logo-link:active path {
+  fill: #756157;
   opacity: 0.3;
 }
 
@@ -752,6 +769,7 @@ opacity: 0.3;
 
 .main-filter {
   display: flex;
+  justify-content: center;
 }
 
 .set-price {
@@ -789,19 +807,15 @@ opacity: 0.3;
 
 .inner-catalog {
   background-size: cover;
-  background-repeat: no-repeat;
   color: #ffffff;
-  background-color: #476b86;
-  min-height: 412px;
+padding: 35px 70px 70px 70px;
+font-size: 18px;
   background-image: url("../images/photos/background-filter.jpg");
-  padding: 35px 70px 70px 70px;
+  margin: 0;
 }
 
 .catalog-title {
   margin: 0;
-  width: 495px;
-  padding-top: 35px;
-  padding-bottom: 8px;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
@@ -811,13 +825,47 @@ opacity: 0.3;
 
 .catalog-filter-list {
   list-style-type: none;
+  margin: 0;
+
+  padding: 0;
 }
+
+.catalog-filter-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  height: 23px;
+  cursor: pointer;
+
+}
+
+.control-input {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.control-input::after {
+  background-image: url(../images/vector-files/tick.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 10px;
+  content: "";
+}
+
 
 .main-filter-1 {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 1060px;
+  min-width: 1060px;
 
 }
 
@@ -830,9 +878,12 @@ opacity: 0.3;
   position: relative;
 }
 
-.breadcrumbs-home {
+.breadcrumbs-icon-home {
+  background-image: url(../images/vector-files/bread-crumbs-home.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  width: 13px;
+height: 15px;
+display: block;
 
 }
 
@@ -859,31 +910,167 @@ opacity: 0.3;
 .breadcrumbs-home:hover {
   color: #ffffff;
   opacity: 60%;
-  }
+}
 
-  .breadcrumbs-home:focus {
-    color: #ffffff;
-  }
-
-  .breadcrumbs-home:active {
-    color: #ffffff;
-    opacity: 30%;
-  }
-
-.button {
-  font-family: inherit;
-  font-weight: 700;
+.breadcrumbs-home:focus {
   color: #ffffff;
-  font-size: 16px;
+}
+
+.breadcrumbs-home:active {
+  color: #ffffff;
+  opacity: 30%;
+}
+
+.filter-infrastructure {
+  min-width: 150px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-filter {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.catalog-filter-title {
+  padding: 0;
+  font-family: "PT Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+  margin-bottom: 32px;
+}
+
+.filter-button {
+  margin-top: 56px;
+  margin-bottom: auto;
+}
+
+.range-scale {
+  position: relative;
+  width: 287px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+  width: 227px;
+
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 5px;
   cursor: pointer;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 20px;
-  border-radius: 4px;
-  text-decoration: none;
   border: none;
-  padding: 8px 10px;
-  box-sizing: border-box;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.range-toggle:active {
+  border-color: #000000;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: 0;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+  width: 288px;
+  margin-bottom: 45px;
+  text-transform: lowercase;
+  gap: 2px;
+}
+
+.catalog-filter-label {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: right;
+    display: flex;
+    position: relative;
+    width: 50%;
+    background-color: #f2f2f2;
+    color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.catalog-filter-label:first-child {
+  border: 2px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input {
+  font-family: "PT Sans", sans-serif;
+  width: 60px;
+  text-align: left;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  appearance: textfield;
+  padding: 0;
+  outline: none;
+
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-right: 70px;
+}
+
+.button-apply {
+  width: 191px;
+  margin-bottom: 32px;
+  padding: 8px 16px;
+  background-color: #82b3d3;
+  display: block;
+}
+
+.button-reset {
+  width: 191px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 0;
+  display: block;
 }
 
 .button:disabled {
@@ -919,8 +1106,7 @@ opacity: 0.3;
   background-color: #6c9e42;
 }
 
-/*opasity срасит всю кнопку, не не текст,
-не получилось состояниу эктив в соотв с макетом*/
+
 .button-choosen:active {
   color: #ffffff;
   opacity: 30%;
@@ -933,7 +1119,7 @@ opacity: 0.3;
 
 .product-card-button:hover,
 .product-card-button:focus {
-background-color: #615048;
+  background-color: #615048;
 }
 
 .product-card-button:active {
@@ -1123,7 +1309,7 @@ background-color: #615048;
 
 .product-card-price {
   font-size: 16px;
-    margin: 0;
+  margin: 0;
   padding: 0;
   gap: 16px;
 }

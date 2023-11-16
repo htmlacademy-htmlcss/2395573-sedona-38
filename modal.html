@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <title class="modal">модальное окно</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <!--Обложка страницы-->
+  <body>
   <div class="wrapper">
-    <body>
+
       <!--Хедер-->
       <header class="main-header" data-test="header">
         <img class="logo" src="images/vector-files/logo.svg" width="140" height="70" alt="Логотип Седоны.">
@@ -212,82 +212,90 @@
         </section>
       </footer>
 
-<!--модальное окно-->
-<div class="modal-container modal-show">
-  <div class="modal modal-search" data-test="modal">
-    <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <div class="modal-from-label">
-        <span class="modal-input-title"><label for="date-start">Дата Заезда:</label></span>
-        <div class="input-wrapper">
-          <input class="modal-input input-date" id="date-start" type="text" name="date" placeholder="Укажите дату" required="" value="27 апреля 2020">
-          <span class="form-modal-input-text error">Мы не можем отправить вас в прошлое.</span>
+      <!--модальное окно-->
+      <div class="modal-container modal-show">
+        <div class="modal modal-search" data-test="modal">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal-from-label">
+              <span class="modal-input-title"><label for="date-start">Дата Заезда:</label></span>
+              <div class="input-wrapper">
+                <input class="modal-input input-date" id="date-start" type="text" name="date" placeholder="Укажите дату"
+                  required="" value="27 апреля 2020">
+                <span class="form-modal-input-text error">Мы не можем отправить вас в прошлое.</span>
+              </div>
+            </div>
+            <div class="modal-from-label">
+              <span class="modal-input-title"><label for="date-riding">Дата Выезда:</label></span>
+              <div class="input-wrapper">
+                <input class="modal-input input-date" id="date-riding" type="text" name="date-start"
+                  placeholder="Укажите дату" required="" value="1 сентября 2023">
+                <span class="form-modal-input-text">На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+            </div>
+            <div class="modal-counters-wrapper">
+              <div class="modal-from-label label-counter">
+                <label for="mans" class="modal-input-title">Взрослые:</label>
+                <div class="modal-counter-wrapper">
+                  <button class="modal-counter-button button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить счетчик</span>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 9V11H17V9H3Z" fill="currentColor" fill-opacity="0.3"></path>
+                    </svg>
+                  </button>
+                  <input id="mans" type="number" name="count-mans" class="modal-counter" value="2">
+                  <button class="modal-counter-button button-plus" type="button">
+                    <span class="visually-hidden">Увеличить счетчик</span>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="currentColor" fill-opacity="0.3"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="modal-from-label label-counter">
+                <label for="childs" class="modal-input-title">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="13" fill="#83B3D3"></circle>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z"
+                        fill="white"></path>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                    будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <div class="modal-counter-wrapper">
+                  <button class="modal-counter-button button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить счетчик</span>
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 9V11H17V9H3Z" fill="currentColor" fill-opacity="0.3"></path>
+                    </svg>
+                  </button>
+                  <input id="childs" type="number" name="count-children" class="modal-counter" value="2">
+                  <button class="modal-counter-button button-plus" type="button">
+                    <span class="visually-hidden">Увеличить счетчик</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="currentColor" fill-opacity="0.3"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="button modal-search-submit" type="submit">Найти</button>
+          </form>
+          <button class="modal-close-button" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
         </div>
       </div>
-      <div class="modal-from-label">
-        <span class="modal-input-title"><label for="date-riding">Дата Выезда:</label></span>
-        <div class="input-wrapper">
-          <input class="modal-input input-date" id="date-riding" type="text" name="date-start" placeholder="Укажите дату" required="" value="1 сентября 2023">
-          <span class="form-modal-input-text">На эти даты есть свободные номера. Пока есть.</span>
-        </div>
-      </div>
-      <div class="modal-counters-wrapper">
-        <div class="modal-from-label label-counter">
-          <label for="mans" class="modal-input-title">Взрослые:</label>
-          <div class="modal-counter-wrapper">
-            <button class="modal-counter-button button-minus" type="button">
-              <span class="visually-hidden">Уменьшить счетчик</span>
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 9V11H17V9H3Z" fill="currentColor" fill-opacity="0.3"></path>
-              </svg>
-            </button>
-            <input id="mans" type="number" name="count-mans" class="modal-counter" value="2">
-            <button class="modal-counter-button button-plus" type="button">
-              <span class="visually-hidden">Увеличить счетчик</span>
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="currentColor" fill-opacity="0.3"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="modal-from-label label-counter">
-          <label for="childs" class="modal-input-title">Дети:</label>
-          <span class="tooltip">
-            <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-              <svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="13" cy="13" r="13" fill="#83B3D3"></circle>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"></path>
-              </svg>
-            </button>
-            <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
-              будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-          </span>
-          <div class="modal-counter-wrapper">
-            <button class="modal-counter-button button-minus" type="button">
-              <span class="visually-hidden">Уменьшить счетчик</span>
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 9V11H17V9H3Z" fill="currentColor" fill-opacity="0.3"></path>
-              </svg>
-            </button>
-            <input id="childs" type="number" name="count-children" class="modal-counter" value="2">
-            <button class="modal-counter-button button-plus" type="button">
-              <span class="visually-hidden">Увеличить счетчик</span>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="currentColor" fill-opacity="0.3"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <button class="button modal-search-submit" type="submit">Найти</button>
-    </form>
-    <button class="modal-close-button" type="button">
-      <span class="visually-hidden">Закрыть</span>
-    </button>
-  </div>
-</div>
 
 
-    </body>
-  </div>
+    </div>
+  </body>
+
 </html>

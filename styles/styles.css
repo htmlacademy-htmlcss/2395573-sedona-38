@@ -1307,7 +1307,7 @@ h3 {
 
 .catalog-filter-title {
   padding: 0;
-  font-family: "PT Sans";
+  font-family: "PT Sans" sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;

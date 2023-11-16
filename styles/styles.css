@@ -811,12 +811,14 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 23px;
-}.modal-counter::-webkit-inner-spin-button, .modal-counter::webkit-countrer-spin-button {
-appearance: none;
 }
 
-.advantages-item
-.input-wrapper {
+.modal-counter::-webkit-inner-spin-button,
+.modal-counter::webkit-countrer-spin-button {
+  appearance: none;
+}
+
+.advantages-item .input-wrapper {
   display: flex;
   margin-left: auto;
   flex-wrap: wrap;
